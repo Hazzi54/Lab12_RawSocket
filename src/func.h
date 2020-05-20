@@ -16,6 +16,7 @@
 #include <netpacket/packet.h>
 #include <net/ethernet.h>
 #include <net/if.h>
+#include <malloc.h>
 
 #define IP "192.168.0.68"
 //#define IP "127.0.0.1"
