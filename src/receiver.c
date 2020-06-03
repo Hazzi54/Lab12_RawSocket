@@ -25,14 +25,14 @@ int main(int argc, char *argv[]) {
 		numBytes = recvfrom(sock, buf, MAXSIZE, 0, (struct sockaddr *) &sender, &size_addr);
 		if(numBytes == -1)
 			handle_error("recvfrom");
-		printf("%s", buf);
+		printf("Before: %s", buf);
 
 		i = 0;
 		while(i < numBytes) {
 			buf[i] = toupper((unsigned char) buf[i]);
 			i++;
 		}
-		printf("%s", buf);
+		printf("After: %s\n", buf);
 		    
 		if(sendto(sock, buf, numBytes, 0, (struct sockaddr *) &sender, size_addr) != numBytes)
 			handle_error("sendto");

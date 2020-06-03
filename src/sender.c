@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
 		ptr += 20;
 		fill_header_transp(ptr, MAXSIZE - 34);
 		ptr += 8;
+		printf("Enter a string:\n");
 		fgets(ptr, MAXSIZE - 42, stdin);
 
 		sizeAddr = sizeof(struct sockaddr_ll);
